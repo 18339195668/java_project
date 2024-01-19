@@ -1,0 +1,25 @@
+server:
+#  port: 80
+  port: 20114
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/wonderful_sql?serverTimezone=GMT%2B8&useSSL=false
+    username: root
+    password: mcu66699
+#    url: jdbc:mysql://rm-9yx5862n98f8z0t5f.mysql.rds.opslysjfw.chnenergy.com.cn:3306/wonderful_sql?serverTimezone=GMT%2B8&useSSL=false
+#    username: admin01
+#    password: Eccom@123
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    default-property-inclusion: ALWAYS
+
+mybatis-plus:
+  type-aliases-package: com/example/mqtt/pojo/entity
+  #mybatis??
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: false
+    mapper-locations: classpath:com/example/mqtt/mapper/xml/*.xml
